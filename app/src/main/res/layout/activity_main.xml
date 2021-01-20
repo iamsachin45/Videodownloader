@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#68B6F4"
+    android:orientation="horizontal">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/action"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basic"
+            android:text="YouVid"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="#3CB1E6"
+            android:textSize="30dp"
+            android:layout_gravity="center_vertical"
+
+
+            ></TextView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="#524967"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#088579"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Enter Youtube Link"
+                android:textColorHint="#F1F5F6"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextTextPersonName"
+                    android:maxLines="1"
+
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="98dp"
+            android:onClick="Download"
+            android:text="Download"
+            />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:layout_marginLeft="105dp"
+                android:onClick="Clear"
+                android:text="Clear"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8810062716899108/8472418596">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
